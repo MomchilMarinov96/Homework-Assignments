@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <div class="align-container">
+            <div class="logo-wrapper" id="logo">
+                <a href="#main_page"> <img src="./images/logo.jpeg" alt="logo">
+                </a>
+            </div >
+            
+            <div class="menu-wrapper">
+                <nav>   
+                    <a href="#main_page">
+                        Menu
+                    </a>
+                </nav>
+            </div >
+
+            <div class="cart-wrapper" id="cartID">
+                <a href="#cart_page"> 
+                    <img src="./images/cart.jpeg" alt="cart">
+                </a> 
+            </div>
+            <div class="order-wrapper">
+                <a href="#order_page"> 
+                    
+                </a> 
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <section id="login_page">
+            <form action="" id="loginForm">
+
+                <label for="username_field">Username:</label>
+                <input required type="text" name="username_field" id="">
+                <label for="password_field">Password:</label>
+                <input required type="password" name="password_field">
+                <p id="wrong_credentials_error" class="error">Wrong credentials!</p>
+                <button type="submit">Log in</button>
+                <button> <a href="#register_page">Register</a></button>
+                
+            </form>
+
+        </section>
+
+        <section id="register_page">
+            <form action="" id="registerForm">
+
+                <label for="username_field_reg">Username:</label>
+                <input required type="text" name="usernameFieldReg" id="regUsername">
+                <label for="password_field_reg">Password:</label>
+                <input required type="password" name="passwordFieldReg" id="password">
+                <label for="confirm_password_field">Confirm password:</label>
+                <input required type="password" name="confirmPasswordField" id="confirmPassword">
+                <p class="error" id="passMismatchError">Your passwords do not match!</p>
+                <p class="error" id="userExistsError">Username is already taken</p>
+                <button type="submit" id="registerBtn">Create new account</button>
+                <button type="button"><a href="#login_page">Log in</a></button>
+                
+            </form>
+        </section>
+
+        <section id="main_page">
+            <div>
+                <input type="text" name="" id="">
+            </div>
+        </section>
+
+        <section id="cart_page">
+            
+        </section>
+
+        <section id="order_page">
+
+        </section>
+
+    </main>
+    <script src="./javaScript/carousell.js"></script>
+    <script src="./javaScript/menu_options.js"> </script>
+    <script src="./javaScript/viewController.js"></script>
+    <script src="./javaScript/Usermanager.js"></script>
+    <script src="./javaScript/RegisterController.js"></script>
+    <script src="./javaScript/loginController.js"></script>
+
+</body>
+</html>
