@@ -1,0 +1,30 @@
+.one {
+    background-image: url("two\ cats.webp");
+    height: 550px;
+    width: 550px;
+    color:azure;
+    background-size: cover;
+}
+
+.two {
+    background-image: url("cat\ yawn.webp");
+    height: 550px;
+    width: 550px;
+    color:azure;
+    background-size: cover;
+}
+
+.three {
+    background-image: url("cat\ yawn.webp");
+    height: 550px;
+    width: 550px;
+    color:azure;
+    background-size: cover;
+}
+.four {
+    background-image: url("cat\ yawn.webp");
+    height: 550px;
+    width: 550px;
+    color:azure;
+    background-size: cover;
+}

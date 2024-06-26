@@ -1,0 +1,15 @@
+
+a:hover {
+    color: red;
+}
+
+div {
+    background-color: green;
+    color: white;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  div:hover {
+    background-color: blue;
+  }

@@ -1,0 +1,18 @@
+.one {
+    border-style:dotted;
+    border-color: bisque;
+}
+
+.two {
+    border-style:dashed;
+    border-color: blue;
+}
+
+.three {
+    border-style:groove;
+    border-color: blueviolet;
+}
+.four {
+    border-style:ridge;
+    border-color: azure;
+}
