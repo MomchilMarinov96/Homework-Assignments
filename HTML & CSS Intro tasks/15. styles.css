@@ -1,0 +1,14 @@
+#first-div{
+    background-color: black;
+    color: crimson;
+
+} 
+#second-div{
+    background-color: yellow;
+    color:black
+}
+
+#third-div{
+    border-style: dashed;
+    margin: 50px;
+}

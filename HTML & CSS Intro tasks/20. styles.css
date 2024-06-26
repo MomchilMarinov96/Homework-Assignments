@@ -1,0 +1,18 @@
+.one {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.two {
+    font-style:normal;
+    font-weight: 900;
+}
+
+.three {
+    font-style: normal;
+    font-weight: 300;
+}
+.four {
+    font-style: oblique;
+    font-weight: 900;
+}
