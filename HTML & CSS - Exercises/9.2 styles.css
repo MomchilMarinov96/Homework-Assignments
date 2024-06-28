@@ -1,0 +1,9 @@
+#unique {
+    /* Style for ID selector */
+    color: cadetblue;
+}
+
+.highlight {
+    /* Style for class selector */
+    color:red
+}

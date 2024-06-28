@@ -1,0 +1,8 @@
+.box {
+    /* margin, border, padding, and content area */
+    margin: 25px;
+    border-width: 4px;
+    padding: 25px;
+    height: 10px;
+    width: 150px;
+}

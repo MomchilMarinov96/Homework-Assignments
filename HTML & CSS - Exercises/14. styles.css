@@ -1,0 +1,9 @@
+div p {
+    /* Style for descendant combinator */
+    color: blueviolet;
+}
+
+div > p {
+    /* Style for child combinator */
+    color: chartreuse;
+}
