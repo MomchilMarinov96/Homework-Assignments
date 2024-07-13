@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Interactive List</title>
+  <style>
+    body { margin: 30px; font-family: Arial, sans-serif; }
+    #list-app { max-width: 400px; margin: auto; }
+    #items li { cursor: pointer; }
+    #items li.editing input { width: 80%; }
+  </style>
+</head>
+<body>
+  <div id="list-app">
+    <p>Click on the item to change the text, or click on the button to create a new item.</p>
+    <ul id="items"></ul>
+    <input type="text" id="newItemInput" placeholder="Enter new item text">
+    <button type="button" id="createButton">Create New</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let itemList = document.getElementById('items');
+      let newItemInput = document.getElementById('newItemInput');
+      let createButton = document.getElementById('createButton');
+
+      function createNewItem(text) {
+        let li = document.createElement('li');
+        li.textContent = text;
+        li.addEventListener('click', editItem);
+        itemList.appendChild(li);
+      }
+
+      function editItem(event) {
+        let li = event.target;
+        let input = document.createElement('input');
+        input.type = 'text';
+        input.value = li.textContent;
+        li.textContent = '';
+        li.appendChild(input);
+        input.focus();
+
+        input.addEventListener('blur', function() {
+          li.textContent = input.value;
+          li.addEventListener('click', editItem);
+        });
+
+        input.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            li.textContent = input.value;
+            li.addEventListener('click', editItem);
+          }
+        });
+
+        li.removeEventListener('click', editItem);
+      }
+
+      createButton.addEventListener('click', function() {
+        let text = newItemInput.value.trim();
+        if (text) {
+          createNewItem(text);
+          newItemInput.value = '';
+        }
+      });
+      createNewItem('Sample Item 1');
+      createNewItem('Sample Item 2');
+    });
+  </script>
+</body>
+</html>

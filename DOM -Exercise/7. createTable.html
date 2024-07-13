@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Create a Table</title>
+  <style type="text/css">
+    body {margin: 30px;}
+  </style>
+  <script>
+    function createTable() {
+      let table = document.getElementById("myTable");
+      table.innerHTML = "";
+      let rows = parseInt(prompt("Enter number of rows:", "3"));
+      let cols = parseInt(prompt("Enter number of columns:", "3"));
+      for (let i = 0; i < rows; i++) {
+        let row = table.insertRow(i); 
+        for (let j = 0; j < cols; j++) {
+          let cell = row.insertCell(j); 
+          cell.innerHTML = "Row-" + i + " Column-" + j; 
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <table id="myTable" border="1">
+  </table>
+  <form>
+    <input type="button" onclick="createTable()" value="Create the table">
+  </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Get Window Dimensions</title>
+  <style>
+    body { margin: 30px; font-family: Arial, sans-serif; }
+    #dimensions {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+  <script>
+    function updateDimensions() {
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+
+      document.getElementById("dimensions").textContent = 
+        "Window width: " + width + "px, Window height: " + height + "px";
+    }
+    window.addEventListener("resize", updateDimensions);
+    document.addEventListener("DOMContentLoaded", updateDimensions);
+  </script>
+</head>
+<body>
+  <h2>Window Dimensions</h2>
+  <p id="dimensions"></p>
+</body>
+</html>

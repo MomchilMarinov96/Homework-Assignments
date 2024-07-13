@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Highlight Bold Words</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    function highlightBoldWords() {
+      var boldWords = document.querySelectorAll('p b');
+      boldWords.forEach(function(word) {
+        word.classList.add('highlight');
+      });
+    }
+
+    function removeHighlight() {
+      var boldWords = document.querySelectorAll('p b');
+      boldWords.forEach(function(word) {
+        word.classList.remove('highlight');
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var link = document.getElementById('highlightLink');
+      link.addEventListener('mouseover', highlightBoldWords);
+      link.addEventListener('mouseout', removeHighlight);
+    });
+  </script>
+</head>
+<body>
+  <a href="#" id="highlightLink">link</a>
+  <p>
+    <b>We</b> have just started <b>this</b> section for the users (beginner to intermediate) who <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to <b>test</b> their JavaScript <b>skill</b>.
+  </p>
+</body>
+</html>

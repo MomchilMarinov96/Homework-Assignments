@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Change the content of a cell</title>
+</head>
+<body>
+  <table id="myTable" border="1">
+    <tr>
+      <td>Row1 cell1</td>
+      <td>Row1 cell2</td>
+    </tr>
+    <tr>
+      <td>Row2 cell1</td>
+      <td>Row2 cell2</td>
+    </tr>
+    <tr>
+      <td>Row3 cell1</td>
+      <td>Row3 cell2</td>
+    </tr>
+  </table>
+  <form>
+    <input type="button" onclick="changeContent(1, 1, 'changed')" value="Change content">
+  </form>
+  <script>
+    function changeContent(row, col, newContent) {
+      
+      let table = document.getElementById("myTable");
+      
+    
+      if (row < table.rows.length && col < table.rows[row].cells.length) {
+        
+        table.rows[row].cells[col].innerHTML = newContent;
+      } else {
+        alert("Invalid row or column index.");
+      }
+    }
+  </script>
+</body>
+</html>

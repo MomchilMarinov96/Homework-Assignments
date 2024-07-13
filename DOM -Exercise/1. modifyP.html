@@ -1,0 +1,25 @@
+<!-- 1.	Modify the style of the paragraph text through javascript code. 
+ Clicking on the button the font, font size, and color of the paragraph text will be changed.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>JS DOM paragraph style</title>
+</head> 
+<body>
+  <p id ='text'>JavaScript Exercises</p> 
+  <div>
+    <button onclick="restyle()">Style</button>
+  </div>
+  <script>
+    function restyle() {
+        let myParagraph = document.getElementById("text");
+        myParagraph.style.fontFamily = 'Helvetica'
+        myParagraph.style.fontSize = "large"
+        myParagraph.style.backgroundColor = "red";
+
+    }
+  </script>
+</body>
+</html>
